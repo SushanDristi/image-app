@@ -8,11 +8,11 @@ part of 'image_model.dart';
 
 _$ImageModelImpl _$$ImageModelImplFromJson(Map<String, dynamic> json) =>
     _$ImageModelImpl(
-      total: (json['total'] as num).toInt(),
-      totalHits: (json['totalHits'] as num).toInt(),
+      total: (json['total'] as num?)?.toInt(),
+      totalHits: (json['totalHits'] as num?)?.toInt(),
       hits:
-          (json['hits'] as List<dynamic>)
-              .map((e) => Hit.fromJson(e as Map<String, dynamic>))
+          (json['hits'] as List<dynamic>?)
+              ?.map((e) => Hit.fromJson(e as Map<String, dynamic>))
               .toList(),
     );
 
@@ -24,29 +24,29 @@ Map<String, dynamic> _$$ImageModelImplToJson(_$ImageModelImpl instance) =>
     };
 
 _$HitImpl _$$HitImplFromJson(Map<String, dynamic> json) => _$HitImpl(
-  id: (json['id'] as num).toInt(),
-  pageURL: json['pageURL'] as String,
-  type: json['type'] as String,
-  tags: json['tags'] as String,
-  previewURL: json['previewURL'] as String,
-  previewWidth: (json['previewWidth'] as num).toInt(),
-  previewHeight: (json['previewHeight'] as num).toInt(),
-  webformatURL: json['webformatURL'] as String,
-  webformatWidth: (json['webformatWidth'] as num).toInt(),
-  webformatHeight: (json['webformatHeight'] as num).toInt(),
-  largeImageURL: json['largeImageURL'] as String,
+  id: (json['id'] as num?)?.toInt(),
+  pageURL: json['pageURL'] as String?,
+  type: json['type'] as String?,
+  tags: json['tags'] as String?,
+  previewURL: json['previewURL'] as String?,
+  previewWidth: (json['previewWidth'] as num?)?.toInt(),
+  previewHeight: (json['previewHeight'] as num?)?.toInt(),
+  webformatURL: json['webformatURL'] as String?,
+  webformatWidth: (json['webformatWidth'] as num?)?.toInt(),
+  webformatHeight: (json['webformatHeight'] as num?)?.toInt(),
+  largeImageURL: json['largeImageURL'] as String?,
   fullHDURL: json['fullHDURL'] as String?,
   imageURL: json['imageURL'] as String?,
-  imageWidth: (json['imageWidth'] as num).toInt(),
-  imageHeight: (json['imageHeight'] as num).toInt(),
-  imageSize: (json['imageSize'] as num).toInt(),
-  views: (json['views'] as num).toInt(),
-  downloads: (json['downloads'] as num).toInt(),
-  likes: (json['likes'] as num).toInt(),
-  comments: (json['comments'] as num).toInt(),
-  user_id: (json['user_id'] as num).toInt(),
-  user: json['user'] as String,
-  userImageURL: json['userImageURL'] as String,
+  imageWidth: (json['imageWidth'] as num?)?.toInt(),
+  imageHeight: (json['imageHeight'] as num?)?.toInt(),
+  imageSize: (json['imageSize'] as num?)?.toInt(),
+  views: (json['views'] as num?)?.toInt(),
+  downloads: (json['downloads'] as num?)?.toInt(),
+  likes: (json['likes'] as num?)?.toInt(),
+  comments: (json['comments'] as num?)?.toInt(),
+  user_id: (json['user_id'] as num?)?.toInt(),
+  user: json['user'] as String?,
+  userImageURL: json['userImageURL'] as String?,
 );
 
 Map<String, dynamic> _$$HitImplToJson(_$HitImpl instance) => <String, dynamic>{

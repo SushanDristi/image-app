@@ -116,9 +116,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       mainAxisSpacing: 8.0,
                                       childAspectRatio: 0.75,
                                     ),
-                                itemCount: images.hits.length,
+                                itemCount: images.hits?.length,
                                 itemBuilder: (context, index) {
-                                  final image = images.hits[index];
+                                  final image = images.hits?[index];
                                   return ImageWidget(image: image!);
                                 },
                               ),

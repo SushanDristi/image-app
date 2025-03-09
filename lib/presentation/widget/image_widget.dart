@@ -27,7 +27,7 @@ class ImageWidget extends ConsumerWidget {
           Stack(
             children: [
               CachedNetworkImage(
-                imageUrl: image.userImageURL,
+                imageUrl: image.userImageURL??"",
                 fit: BoxFit.cover,
                 placeholder:
                     (context, url) =>
@@ -89,7 +89,7 @@ class ImageWidget extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text('Owner: ${image.user}'),
-                Text('Size: ${Utils.formatImageSize(image.imageSize)}'),
+                Text('Size: ${Utils.formatImageSize(image.imageSize??0)}'),
               ],
             ),
           ),

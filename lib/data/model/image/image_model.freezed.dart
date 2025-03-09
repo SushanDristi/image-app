@@ -21,9 +21,9 @@ ImageModel _$ImageModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImageModel {
-  int get total => throw _privateConstructorUsedError;
-  int get totalHits => throw _privateConstructorUsedError;
-  List<Hit> get hits => throw _privateConstructorUsedError;
+  int? get total => throw _privateConstructorUsedError;
+  int? get totalHits => throw _privateConstructorUsedError;
+  List<Hit>? get hits => throw _privateConstructorUsedError;
 
   /// Serializes this ImageModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ abstract class $ImageModelCopyWith<$Res> {
     $Res Function(ImageModel) then,
   ) = _$ImageModelCopyWithImpl<$Res, ImageModel>;
   @useResult
-  $Res call({int total, int totalHits, List<Hit> hits});
+  $Res call({int? total, int? totalHits, List<Hit>? hits});
 }
 
 /// @nodoc
@@ -60,27 +60,27 @@ class _$ImageModelCopyWithImpl<$Res, $Val extends ImageModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? total = null,
-    Object? totalHits = null,
-    Object? hits = null,
+    Object? total = freezed,
+    Object? totalHits = freezed,
+    Object? hits = freezed,
   }) {
     return _then(
       _value.copyWith(
             total:
-                null == total
+                freezed == total
                     ? _value.total
                     : total // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             totalHits:
-                null == totalHits
+                freezed == totalHits
                     ? _value.totalHits
                     : totalHits // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             hits:
-                null == hits
+                freezed == hits
                     ? _value.hits
                     : hits // ignore: cast_nullable_to_non_nullable
-                        as List<Hit>,
+                        as List<Hit>?,
           )
           as $Val,
     );
@@ -96,7 +96,7 @@ abstract class _$$ImageModelImplCopyWith<$Res>
   ) = __$$ImageModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int total, int totalHits, List<Hit> hits});
+  $Res call({int? total, int? totalHits, List<Hit>? hits});
 }
 
 /// @nodoc
@@ -113,27 +113,27 @@ class __$$ImageModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? total = null,
-    Object? totalHits = null,
-    Object? hits = null,
+    Object? total = freezed,
+    Object? totalHits = freezed,
+    Object? hits = freezed,
   }) {
     return _then(
       _$ImageModelImpl(
         total:
-            null == total
+            freezed == total
                 ? _value.total
                 : total // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         totalHits:
-            null == totalHits
+            freezed == totalHits
                 ? _value.totalHits
                 : totalHits // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         hits:
-            null == hits
+            freezed == hits
                 ? _value._hits
                 : hits // ignore: cast_nullable_to_non_nullable
-                    as List<Hit>,
+                    as List<Hit>?,
       ),
     );
   }
@@ -142,25 +142,24 @@ class __$$ImageModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ImageModelImpl implements _ImageModel {
-  const _$ImageModelImpl({
-    required this.total,
-    required this.totalHits,
-    required final List<Hit> hits,
-  }) : _hits = hits;
+  const _$ImageModelImpl({this.total, this.totalHits, final List<Hit>? hits})
+    : _hits = hits;
 
   factory _$ImageModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ImageModelImplFromJson(json);
 
   @override
-  final int total;
+  final int? total;
   @override
-  final int totalHits;
-  final List<Hit> _hits;
+  final int? totalHits;
+  final List<Hit>? _hits;
   @override
-  List<Hit> get hits {
+  List<Hit>? get hits {
+    final value = _hits;
+    if (value == null) return null;
     if (_hits is EqualUnmodifiableListView) return _hits;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_hits);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -204,20 +203,20 @@ class _$ImageModelImpl implements _ImageModel {
 
 abstract class _ImageModel implements ImageModel {
   const factory _ImageModel({
-    required final int total,
-    required final int totalHits,
-    required final List<Hit> hits,
+    final int? total,
+    final int? totalHits,
+    final List<Hit>? hits,
   }) = _$ImageModelImpl;
 
   factory _ImageModel.fromJson(Map<String, dynamic> json) =
       _$ImageModelImpl.fromJson;
 
   @override
-  int get total;
+  int? get total;
   @override
-  int get totalHits;
+  int? get totalHits;
   @override
-  List<Hit> get hits;
+  List<Hit>? get hits;
 
   /// Create a copy of ImageModel
   /// with the given fields replaced by the non-null parameter values.
@@ -233,29 +232,29 @@ Hit _$HitFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Hit {
-  int get id => throw _privateConstructorUsedError;
-  String get pageURL => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  String get tags => throw _privateConstructorUsedError;
-  String get previewURL => throw _privateConstructorUsedError;
-  int get previewWidth => throw _privateConstructorUsedError;
-  int get previewHeight => throw _privateConstructorUsedError;
-  String get webformatURL => throw _privateConstructorUsedError;
-  int get webformatWidth => throw _privateConstructorUsedError;
-  int get webformatHeight => throw _privateConstructorUsedError;
-  String get largeImageURL => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  String? get pageURL => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
+  String? get tags => throw _privateConstructorUsedError;
+  String? get previewURL => throw _privateConstructorUsedError;
+  int? get previewWidth => throw _privateConstructorUsedError;
+  int? get previewHeight => throw _privateConstructorUsedError;
+  String? get webformatURL => throw _privateConstructorUsedError;
+  int? get webformatWidth => throw _privateConstructorUsedError;
+  int? get webformatHeight => throw _privateConstructorUsedError;
+  String? get largeImageURL => throw _privateConstructorUsedError;
   String? get fullHDURL => throw _privateConstructorUsedError;
   String? get imageURL => throw _privateConstructorUsedError;
-  int get imageWidth => throw _privateConstructorUsedError;
-  int get imageHeight => throw _privateConstructorUsedError;
-  int get imageSize => throw _privateConstructorUsedError;
-  int get views => throw _privateConstructorUsedError;
-  int get downloads => throw _privateConstructorUsedError;
-  int get likes => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  int get user_id => throw _privateConstructorUsedError;
-  String get user => throw _privateConstructorUsedError;
-  String get userImageURL => throw _privateConstructorUsedError;
+  int? get imageWidth => throw _privateConstructorUsedError;
+  int? get imageHeight => throw _privateConstructorUsedError;
+  int? get imageSize => throw _privateConstructorUsedError;
+  int? get views => throw _privateConstructorUsedError;
+  int? get downloads => throw _privateConstructorUsedError;
+  int? get likes => throw _privateConstructorUsedError;
+  int? get comments => throw _privateConstructorUsedError;
+  int? get user_id => throw _privateConstructorUsedError;
+  String? get user => throw _privateConstructorUsedError;
+  String? get userImageURL => throw _privateConstructorUsedError;
 
   /// Serializes this Hit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -272,29 +271,29 @@ abstract class $HitCopyWith<$Res> {
       _$HitCopyWithImpl<$Res, Hit>;
   @useResult
   $Res call({
-    int id,
-    String pageURL,
-    String type,
-    String tags,
-    String previewURL,
-    int previewWidth,
-    int previewHeight,
-    String webformatURL,
-    int webformatWidth,
-    int webformatHeight,
-    String largeImageURL,
+    int? id,
+    String? pageURL,
+    String? type,
+    String? tags,
+    String? previewURL,
+    int? previewWidth,
+    int? previewHeight,
+    String? webformatURL,
+    int? webformatWidth,
+    int? webformatHeight,
+    String? largeImageURL,
     String? fullHDURL,
     String? imageURL,
-    int imageWidth,
-    int imageHeight,
-    int imageSize,
-    int views,
-    int downloads,
-    int likes,
-    int comments,
-    int user_id,
-    String user,
-    String userImageURL,
+    int? imageWidth,
+    int? imageHeight,
+    int? imageSize,
+    int? views,
+    int? downloads,
+    int? likes,
+    int? comments,
+    int? user_id,
+    String? user,
+    String? userImageURL,
   });
 }
 
@@ -312,87 +311,87 @@ class _$HitCopyWithImpl<$Res, $Val extends Hit> implements $HitCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? pageURL = null,
-    Object? type = null,
-    Object? tags = null,
-    Object? previewURL = null,
-    Object? previewWidth = null,
-    Object? previewHeight = null,
-    Object? webformatURL = null,
-    Object? webformatWidth = null,
-    Object? webformatHeight = null,
-    Object? largeImageURL = null,
+    Object? id = freezed,
+    Object? pageURL = freezed,
+    Object? type = freezed,
+    Object? tags = freezed,
+    Object? previewURL = freezed,
+    Object? previewWidth = freezed,
+    Object? previewHeight = freezed,
+    Object? webformatURL = freezed,
+    Object? webformatWidth = freezed,
+    Object? webformatHeight = freezed,
+    Object? largeImageURL = freezed,
     Object? fullHDURL = freezed,
     Object? imageURL = freezed,
-    Object? imageWidth = null,
-    Object? imageHeight = null,
-    Object? imageSize = null,
-    Object? views = null,
-    Object? downloads = null,
-    Object? likes = null,
-    Object? comments = null,
-    Object? user_id = null,
-    Object? user = null,
-    Object? userImageURL = null,
+    Object? imageWidth = freezed,
+    Object? imageHeight = freezed,
+    Object? imageSize = freezed,
+    Object? views = freezed,
+    Object? downloads = freezed,
+    Object? likes = freezed,
+    Object? comments = freezed,
+    Object? user_id = freezed,
+    Object? user = freezed,
+    Object? userImageURL = freezed,
   }) {
     return _then(
       _value.copyWith(
             id:
-                null == id
+                freezed == id
                     ? _value.id
                     : id // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             pageURL:
-                null == pageURL
+                freezed == pageURL
                     ? _value.pageURL
                     : pageURL // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             type:
-                null == type
+                freezed == type
                     ? _value.type
                     : type // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             tags:
-                null == tags
+                freezed == tags
                     ? _value.tags
                     : tags // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             previewURL:
-                null == previewURL
+                freezed == previewURL
                     ? _value.previewURL
                     : previewURL // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             previewWidth:
-                null == previewWidth
+                freezed == previewWidth
                     ? _value.previewWidth
                     : previewWidth // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             previewHeight:
-                null == previewHeight
+                freezed == previewHeight
                     ? _value.previewHeight
                     : previewHeight // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             webformatURL:
-                null == webformatURL
+                freezed == webformatURL
                     ? _value.webformatURL
                     : webformatURL // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             webformatWidth:
-                null == webformatWidth
+                freezed == webformatWidth
                     ? _value.webformatWidth
                     : webformatWidth // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             webformatHeight:
-                null == webformatHeight
+                freezed == webformatHeight
                     ? _value.webformatHeight
                     : webformatHeight // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             largeImageURL:
-                null == largeImageURL
+                freezed == largeImageURL
                     ? _value.largeImageURL
                     : largeImageURL // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             fullHDURL:
                 freezed == fullHDURL
                     ? _value.fullHDURL
@@ -404,55 +403,55 @@ class _$HitCopyWithImpl<$Res, $Val extends Hit> implements $HitCopyWith<$Res> {
                     : imageURL // ignore: cast_nullable_to_non_nullable
                         as String?,
             imageWidth:
-                null == imageWidth
+                freezed == imageWidth
                     ? _value.imageWidth
                     : imageWidth // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             imageHeight:
-                null == imageHeight
+                freezed == imageHeight
                     ? _value.imageHeight
                     : imageHeight // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             imageSize:
-                null == imageSize
+                freezed == imageSize
                     ? _value.imageSize
                     : imageSize // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             views:
-                null == views
+                freezed == views
                     ? _value.views
                     : views // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             downloads:
-                null == downloads
+                freezed == downloads
                     ? _value.downloads
                     : downloads // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             likes:
-                null == likes
+                freezed == likes
                     ? _value.likes
                     : likes // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             comments:
-                null == comments
+                freezed == comments
                     ? _value.comments
                     : comments // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             user_id:
-                null == user_id
+                freezed == user_id
                     ? _value.user_id
                     : user_id // ignore: cast_nullable_to_non_nullable
-                        as int,
+                        as int?,
             user:
-                null == user
+                freezed == user
                     ? _value.user
                     : user // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
             userImageURL:
-                null == userImageURL
+                freezed == userImageURL
                     ? _value.userImageURL
                     : userImageURL // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as String?,
           )
           as $Val,
     );
@@ -466,29 +465,29 @@ abstract class _$$HitImplCopyWith<$Res> implements $HitCopyWith<$Res> {
   @override
   @useResult
   $Res call({
-    int id,
-    String pageURL,
-    String type,
-    String tags,
-    String previewURL,
-    int previewWidth,
-    int previewHeight,
-    String webformatURL,
-    int webformatWidth,
-    int webformatHeight,
-    String largeImageURL,
+    int? id,
+    String? pageURL,
+    String? type,
+    String? tags,
+    String? previewURL,
+    int? previewWidth,
+    int? previewHeight,
+    String? webformatURL,
+    int? webformatWidth,
+    int? webformatHeight,
+    String? largeImageURL,
     String? fullHDURL,
     String? imageURL,
-    int imageWidth,
-    int imageHeight,
-    int imageSize,
-    int views,
-    int downloads,
-    int likes,
-    int comments,
-    int user_id,
-    String user,
-    String userImageURL,
+    int? imageWidth,
+    int? imageHeight,
+    int? imageSize,
+    int? views,
+    int? downloads,
+    int? likes,
+    int? comments,
+    int? user_id,
+    String? user,
+    String? userImageURL,
   });
 }
 
@@ -503,87 +502,87 @@ class __$$HitImplCopyWithImpl<$Res> extends _$HitCopyWithImpl<$Res, _$HitImpl>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? pageURL = null,
-    Object? type = null,
-    Object? tags = null,
-    Object? previewURL = null,
-    Object? previewWidth = null,
-    Object? previewHeight = null,
-    Object? webformatURL = null,
-    Object? webformatWidth = null,
-    Object? webformatHeight = null,
-    Object? largeImageURL = null,
+    Object? id = freezed,
+    Object? pageURL = freezed,
+    Object? type = freezed,
+    Object? tags = freezed,
+    Object? previewURL = freezed,
+    Object? previewWidth = freezed,
+    Object? previewHeight = freezed,
+    Object? webformatURL = freezed,
+    Object? webformatWidth = freezed,
+    Object? webformatHeight = freezed,
+    Object? largeImageURL = freezed,
     Object? fullHDURL = freezed,
     Object? imageURL = freezed,
-    Object? imageWidth = null,
-    Object? imageHeight = null,
-    Object? imageSize = null,
-    Object? views = null,
-    Object? downloads = null,
-    Object? likes = null,
-    Object? comments = null,
-    Object? user_id = null,
-    Object? user = null,
-    Object? userImageURL = null,
+    Object? imageWidth = freezed,
+    Object? imageHeight = freezed,
+    Object? imageSize = freezed,
+    Object? views = freezed,
+    Object? downloads = freezed,
+    Object? likes = freezed,
+    Object? comments = freezed,
+    Object? user_id = freezed,
+    Object? user = freezed,
+    Object? userImageURL = freezed,
   }) {
     return _then(
       _$HitImpl(
         id:
-            null == id
+            freezed == id
                 ? _value.id
                 : id // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         pageURL:
-            null == pageURL
+            freezed == pageURL
                 ? _value.pageURL
                 : pageURL // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         type:
-            null == type
+            freezed == type
                 ? _value.type
                 : type // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         tags:
-            null == tags
+            freezed == tags
                 ? _value.tags
                 : tags // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         previewURL:
-            null == previewURL
+            freezed == previewURL
                 ? _value.previewURL
                 : previewURL // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         previewWidth:
-            null == previewWidth
+            freezed == previewWidth
                 ? _value.previewWidth
                 : previewWidth // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         previewHeight:
-            null == previewHeight
+            freezed == previewHeight
                 ? _value.previewHeight
                 : previewHeight // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         webformatURL:
-            null == webformatURL
+            freezed == webformatURL
                 ? _value.webformatURL
                 : webformatURL // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         webformatWidth:
-            null == webformatWidth
+            freezed == webformatWidth
                 ? _value.webformatWidth
                 : webformatWidth // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         webformatHeight:
-            null == webformatHeight
+            freezed == webformatHeight
                 ? _value.webformatHeight
                 : webformatHeight // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         largeImageURL:
-            null == largeImageURL
+            freezed == largeImageURL
                 ? _value.largeImageURL
                 : largeImageURL // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         fullHDURL:
             freezed == fullHDURL
                 ? _value.fullHDURL
@@ -595,55 +594,55 @@ class __$$HitImplCopyWithImpl<$Res> extends _$HitCopyWithImpl<$Res, _$HitImpl>
                 : imageURL // ignore: cast_nullable_to_non_nullable
                     as String?,
         imageWidth:
-            null == imageWidth
+            freezed == imageWidth
                 ? _value.imageWidth
                 : imageWidth // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         imageHeight:
-            null == imageHeight
+            freezed == imageHeight
                 ? _value.imageHeight
                 : imageHeight // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         imageSize:
-            null == imageSize
+            freezed == imageSize
                 ? _value.imageSize
                 : imageSize // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         views:
-            null == views
+            freezed == views
                 ? _value.views
                 : views // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         downloads:
-            null == downloads
+            freezed == downloads
                 ? _value.downloads
                 : downloads // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         likes:
-            null == likes
+            freezed == likes
                 ? _value.likes
                 : likes // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         comments:
-            null == comments
+            freezed == comments
                 ? _value.comments
                 : comments // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         user_id:
-            null == user_id
+            freezed == user_id
                 ? _value.user_id
                 : user_id // ignore: cast_nullable_to_non_nullable
-                    as int,
+                    as int?,
         user:
-            null == user
+            freezed == user
                 ? _value.user
                 : user // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
         userImageURL:
-            null == userImageURL
+            freezed == userImageURL
                 ? _value.userImageURL
                 : userImageURL // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as String?,
       ),
     );
   }
@@ -653,80 +652,80 @@ class __$$HitImplCopyWithImpl<$Res> extends _$HitCopyWithImpl<$Res, _$HitImpl>
 @JsonSerializable()
 class _$HitImpl implements _Hit {
   const _$HitImpl({
-    required this.id,
-    required this.pageURL,
-    required this.type,
-    required this.tags,
-    required this.previewURL,
-    required this.previewWidth,
-    required this.previewHeight,
-    required this.webformatURL,
-    required this.webformatWidth,
-    required this.webformatHeight,
-    required this.largeImageURL,
+    this.id,
+    this.pageURL,
+    this.type,
+    this.tags,
+    this.previewURL,
+    this.previewWidth,
+    this.previewHeight,
+    this.webformatURL,
+    this.webformatWidth,
+    this.webformatHeight,
+    this.largeImageURL,
     this.fullHDURL,
     this.imageURL,
-    required this.imageWidth,
-    required this.imageHeight,
-    required this.imageSize,
-    required this.views,
-    required this.downloads,
-    required this.likes,
-    required this.comments,
-    required this.user_id,
-    required this.user,
-    required this.userImageURL,
+    this.imageWidth,
+    this.imageHeight,
+    this.imageSize,
+    this.views,
+    this.downloads,
+    this.likes,
+    this.comments,
+    this.user_id,
+    this.user,
+    this.userImageURL,
   });
 
   factory _$HitImpl.fromJson(Map<String, dynamic> json) =>
       _$$HitImplFromJson(json);
 
   @override
-  final int id;
+  final int? id;
   @override
-  final String pageURL;
+  final String? pageURL;
   @override
-  final String type;
+  final String? type;
   @override
-  final String tags;
+  final String? tags;
   @override
-  final String previewURL;
+  final String? previewURL;
   @override
-  final int previewWidth;
+  final int? previewWidth;
   @override
-  final int previewHeight;
+  final int? previewHeight;
   @override
-  final String webformatURL;
+  final String? webformatURL;
   @override
-  final int webformatWidth;
+  final int? webformatWidth;
   @override
-  final int webformatHeight;
+  final int? webformatHeight;
   @override
-  final String largeImageURL;
+  final String? largeImageURL;
   @override
   final String? fullHDURL;
   @override
   final String? imageURL;
   @override
-  final int imageWidth;
+  final int? imageWidth;
   @override
-  final int imageHeight;
+  final int? imageHeight;
   @override
-  final int imageSize;
+  final int? imageSize;
   @override
-  final int views;
+  final int? views;
   @override
-  final int downloads;
+  final int? downloads;
   @override
-  final int likes;
+  final int? likes;
   @override
-  final int comments;
+  final int? comments;
   @override
-  final int user_id;
+  final int? user_id;
   @override
-  final String user;
+  final String? user;
   @override
-  final String userImageURL;
+  final String? userImageURL;
 
   @override
   String toString() {
@@ -823,79 +822,79 @@ class _$HitImpl implements _Hit {
 
 abstract class _Hit implements Hit {
   const factory _Hit({
-    required final int id,
-    required final String pageURL,
-    required final String type,
-    required final String tags,
-    required final String previewURL,
-    required final int previewWidth,
-    required final int previewHeight,
-    required final String webformatURL,
-    required final int webformatWidth,
-    required final int webformatHeight,
-    required final String largeImageURL,
+    final int? id,
+    final String? pageURL,
+    final String? type,
+    final String? tags,
+    final String? previewURL,
+    final int? previewWidth,
+    final int? previewHeight,
+    final String? webformatURL,
+    final int? webformatWidth,
+    final int? webformatHeight,
+    final String? largeImageURL,
     final String? fullHDURL,
     final String? imageURL,
-    required final int imageWidth,
-    required final int imageHeight,
-    required final int imageSize,
-    required final int views,
-    required final int downloads,
-    required final int likes,
-    required final int comments,
-    required final int user_id,
-    required final String user,
-    required final String userImageURL,
+    final int? imageWidth,
+    final int? imageHeight,
+    final int? imageSize,
+    final int? views,
+    final int? downloads,
+    final int? likes,
+    final int? comments,
+    final int? user_id,
+    final String? user,
+    final String? userImageURL,
   }) = _$HitImpl;
 
   factory _Hit.fromJson(Map<String, dynamic> json) = _$HitImpl.fromJson;
 
   @override
-  int get id;
+  int? get id;
   @override
-  String get pageURL;
+  String? get pageURL;
   @override
-  String get type;
+  String? get type;
   @override
-  String get tags;
+  String? get tags;
   @override
-  String get previewURL;
+  String? get previewURL;
   @override
-  int get previewWidth;
+  int? get previewWidth;
   @override
-  int get previewHeight;
+  int? get previewHeight;
   @override
-  String get webformatURL;
+  String? get webformatURL;
   @override
-  int get webformatWidth;
+  int? get webformatWidth;
   @override
-  int get webformatHeight;
+  int? get webformatHeight;
   @override
-  String get largeImageURL;
+  String? get largeImageURL;
   @override
   String? get fullHDURL;
   @override
   String? get imageURL;
   @override
-  int get imageWidth;
+  int? get imageWidth;
   @override
-  int get imageHeight;
+  int? get imageHeight;
   @override
-  int get imageSize;
+  int? get imageSize;
   @override
-  int get views;
+  int? get views;
   @override
-  int get downloads;
+  int? get downloads;
   @override
-  int get likes;
+  int? get likes;
   @override
-  int get comments;
+  int? get comments;
   @override
-  int get user_id;
+  int? get user_id;
   @override
-  String get user;
+  String? get user;
   @override
-  String get userImageURL;
+  String? get userImageURL;
 
   /// Create a copy of Hit
   /// with the given fields replaced by the non-null parameter values.

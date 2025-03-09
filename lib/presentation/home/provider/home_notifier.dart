@@ -39,14 +39,14 @@ class HomeNotifier extends _$HomeNotifier {
             if(paramsData != null){
               state = AsyncData(data);
 
-              if (data.hits.length == data.totalHits) {
+              if (data.hits?.length == data.totalHits) {
                 _hasMore = false;
               } else {
                 _currentPage++;
               }
             }else{
               final currentHits = state.value?.hits ?? [];
-              final newHits = [...currentHits, ...data.hits];
+              final newHits = [...currentHits, ...?data.hits];
               state = AsyncData(
                 ImageModel(
                   total: data.total,
@@ -55,7 +55,7 @@ class HomeNotifier extends _$HomeNotifier {
                 ),
               );
 
-              if (newHits.length >= data.totalHits) {
+              if (newHits.length >= (data.totalHits??0)) {
                 _hasMore = false;
               } else {
                 _currentPage++;
