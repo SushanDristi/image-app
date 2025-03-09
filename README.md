@@ -112,5 +112,13 @@ dio: For making HTTP requests.
 auto_route: For navigation.
 cached_network_image: For caching and displaying network images.
 
+test
+│ ├── favourite/
+
+│ ├── home/
+
+│ ├── provider/
+
+
 Use this command to generate code
 flutter packages pub run build_runner build --delete-conflicting-outputs
